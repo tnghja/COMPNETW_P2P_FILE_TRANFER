@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        *  {
+            font-family:"sourcesanspro-regular", Arial, sans-serif;
+        }
+        body{
+            background-color: #EEE;
+        }
+        .container{
+            width: 1250px;
+            background-color: white;
+        }
+        .header{
+            width: 100%;
+            height: 70px;
+            background-color: #EEE;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            background-color: #6699FF;
+        }
+        
+        .header .title{
+            color: #FFF;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .header #logo{
+            margin: 0 10px;
+        }
+        .mainContent{
+            width: 100%;
+            display: flex;
+        }
+        .mainContent .loginForm{
+            width: 40%;
+            background-color: #EEEEEE;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .mainContent .webInformation{
+            width: 60%;
+            background-color: #FFF;
+            padding: 15px;
+            margin: 10px;
+        }
+        ._2ndTittle{
+            color: #0067FF;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        hr{
+            border: 1px solid #777777;
+            margin: 5px 0px;
+        }
+
+        .mainContent .loginForm label{
+            font-size: 14px;
+            font-weight: bold;
+            color: #777777;
+            display: block;
+        }
+        .mainContent .loginForm input{
+            width: 320px;
+            height: 30px;
+            background-color: #FFFFD4;
+            margin: 3px 0px 10px 0px;
+            border-radius: 5px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .loginForm a{
+            display: inline-block;
+            margin-right: 6px;
+            margin-top: 10px;
+        }
+
+        .webInformation #vietnamese{
+            margin-right: 5px;
+        }   
+        .webInformation p{
+            margin-bottom: 5px;
+        }
+        .webInformation #myEmail{
+            margin-right: 5px;
+        }  
+    </style>
+    <title>Login</title>
+</head>
+<body>
+    <div class = "container">
+        <div class = "header">
+            <div><img src = "images/logo.png" alt = "logo" id = "logo" width: 55px; height: 55px></div>
+            <span class = "title" id = "loginTo" style = "margin-right: 5px;">Đăng Nhập Vào My File </span>
+            <span class = "title" id = "transfer" style = "color: #CCCCFF"> Transfer</span>
+        </div>
+        <div class = "mainContent">
+
+            <div class = "loginForm">
+                <div class = "_2ndTittle">Nhập thông tin tài khoản của bạn</div>
+                <hr>
+                <form method = POST>
+                    <label for = "username">Tên đăng nhập</label>
+                    <input type = "text" id = "username" name = "username">
+
+                    <label for = "pwd">Mật khẩu</label>
+                    <input type = "password" id = "pwd" name = "pwd">
+                    <hr>
+                    <button type = "reset" class = "btn btn-primary">Đăng nhập</button> <!-- thay đổi type khi code js -->
+                    <button type = "reset" class = "btn btn-primary">Làm mới</button>
+                </form>
+                <a href = "register.html" id = "register">Đăng ký</a> <br>
+                <a href = "#" id = "changePassword">Thay đổi mật khẩu</a>
+                <a href = "#" id = "forgetPassword">Quên mật khẩu</a>
+            </div>
+
+            <div class = "webInformation">
+                <div class = "_2ndTittle">Ngôn ngữ</div>
+                <a href = "#" id = "vietnamese">Tiếng Việt</a>|
+                <a href = "#" id = "english">Tiếng Anh</a>
+                <div class = "_2ndTittle">Thông tin về trang web</div>
+                <div id = "webInformation">
+                    <p>My File Transfer là ứng dụng cho phép người dùng có thể truyền tải các file một cách nhanh chóng và dễ dàng.</p>
+                    <p>Ứng dụng được phát triển bởi nhóm sinh viên trường Đại học Bách Khoa TPHCM.</p>
+                    <p>Phiên bản: 1.0.0</p>
+                </div>
+                <div class = "_2ndTittle">Hỗ trợ kỹ thuật</div>
+                <a href = "#" id = "myEmail">tai.vo1421@hcmut.edu.vn</a>|
+                <a href = "#" id = "phoneNumber">0364823793</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

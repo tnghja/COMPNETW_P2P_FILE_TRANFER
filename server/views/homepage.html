@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: #EEE;
+        }
+        a{
+            text-decoration: none;
+        }
+        .container{
+            width: 1177px;
+            height: 900px;
+            background-color: white;
+            padding: 0px; 
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Set minimum height to full viewport height */
+            box-sizing: border-box; /* Include padding and border in the total height/width */
+        }
+        .header{
+            width: 100%;
+            height: 120px;
+            background-color: #EEE;
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            background-color: #6699FF;
+        }
+        ._2ndTitle{
+            color: #0067FF;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        ._3rdTitle{
+            color: #0067FF;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+        .header .title{
+            color: #FFF;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+        }
+        .header #logo{
+            margin: 0px 10px 0px 88px;
+        }
+        .header .leftTitle{
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .header .rightTitle{
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            font-size: 24px;
+        }
+        .header .rightTitle #displayUsername{
+            margin-right: 10px;
+            color: white;
+        }
+        .header .rightTitle a{
+            margin-left: 10px;
+            margin-right: 88px;
+        }
+
+        .mainContent{
+            width: 100%;
+            display: flex;
+            flex: 1;
+        }
+        .mainContent .function{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            padding: 0px;
+            margin: 10px 88px;
+            border-radius: 5px;
+        }
+        .mainContent .function input{
+            width: 100%;
+            height: 40px;
+            border-radius: 5px;
+            border: 1px solid #0067FF;
+            padding: 0px 10px;
+            margin-bottom: 10px;
+        }
+
+        .mainContent .verticalLine{
+            border-left: 2px solid #0067FF;
+            height: 500px;
+            margin-bottom: 50px;
+            margin-right: 20px;
+        }
+        .mainContent .function div {
+            margin-bottom: 10px;
+        }
+
+        .footer{
+            background-color: #CCCCFF;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+        }
+    </style>
+    <title>Home</title>
+</head>
+<body>
+    <div class = "container">
+        <div class = "header">
+            <div><img src = "images/logo.png" alt = "logo" id = "logo"></div>
+            <div class = "leftTitle">
+                <span class = "title" id = "loginTo" style = "margin-right: 5px;">My File </span>
+                <span class = "title" id = "transfer" style = "color: #CCCCFF"> Transfer</span>
+            </div>
+            <div class = "rightTitle">
+                <div id = "displayUsername">username</div> |
+                <a href = "login.html">Đăng xuất</a>
+            </div>
+        </div>
+        <div class = "mainContent">
+            <div class = "function">
+                <div class = "fetchFunction">
+                    <div class = "_2ndTitle">Fetch File</div>
+                    <label for = "fetchFileName" class = "_3rdTitle">Tên file: </label>
+                    <input type = "text" id = "fetchFileName" placeholder = "Nhập tên file cần lấy">
+
+                    <div class = "_3rdTitle">Những bên chứa file:</div>
+                    <ul id = "fetchFilePeer">
+                        <li>username1</li>
+                        <li>username2</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class = "getFunction">
+                    <div class = "_2ndTitle">Get File</div>
+                    <label for = "getFileName" class = "_3rdTitle">Tên file: </label>
+                    <input type = "text" id = "getFileName" placeholder = "Nhập tên file cần lấy">
+
+                    <label for = "getFileAddress" class = "_3rdTitle">Địa chỉ bên chứa file: </label>
+                    <input type = "text" id = "getFileAddress" placeholder = "Nhập địa chỉ bên chứa file">
+                </div>
+            </div>
+            <div class = "verticalLine"></div>
+            <div class = "listFile">
+                <div class = "_3rdTitle">Danh sách file của bạn:</div>
+                <ul id = "listFile">
+                    <li>file1</li>
+                    <li>file2</li>
+                </ul>
+            </div>
+        </div>
+        <div class = "footer">
+            <p>My File Transfer là ứng dụng được phát triển bởi nhóm sinh viên trường Đại học Bách Khoa TPHCM</p>
+            <a href = "help.html">Help</a>|<a href = "#">Contact Us</a>|<a href = "#">Follow Us</a>
+        </div>
+    </div>
+</body>
+</html>
